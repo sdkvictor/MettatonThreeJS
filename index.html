@@ -63,6 +63,22 @@
                 });
             });
 
+
+
+            mtlLoader.load('assets/meta.mtl', function (materials) {
+                materials.preload();
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);        
+            objLoader.load('assets/meta.obj', function (object){
+                    scene.add(object);
+                    object.position.z -= 280;
+                    object.position.y -= 50;
+                    object.position.x += 5;
+                    object.rotation.x = 1;
+                    object.scale(1,1);
+
+                });
+            });
 			/*
             const animate = function () {
 				requestAnimationFrame( animate );
