@@ -64,6 +64,55 @@
                 });
             });
 
+            // Circles
+            const geometry = new THREE.CircleGeometry( 4, 32 );
+            const material = new THREE.MeshBasicMaterial( { color: 0xFF0808 } );
+            const ULCircle = new THREE.Mesh( geometry, material );
+            const URCircle = ULCircle.clone();
+            const LLCircle = ULCircle.clone();
+            const LRCircle = ULCircle.clone();
+            const UCCircle = ULCircle.clone();
+            const material2 = new THREE.MeshBasicMaterial( { color: 0xC0C0C0 } );
+            const CCircle = new THREE.Mesh( geometry, material2 );
+            scene.add(ULCircle);
+            scene.add(URCircle);
+            scene.add(LLCircle);
+            scene.add(LRCircle);
+            scene.add(UCCircle);
+            scene.add(CCircle);
+
+            // Upper Left Circle
+            ULCircle.position.x -= 13;
+            ULCircle.position.y += 7;
+            ULCircle.rotation.x = 1;
+            ULCircle.rotation.y = 0.2;
+
+            // Upper Right Circle
+            URCircle.position.x += 13;
+            URCircle.position.y += 7;
+            URCircle.rotation.x = 1;
+            URCircle.rotation.y -= 0.2;
+
+            // Lower Left Circle
+            LLCircle.position.x -= 10;
+            LLCircle.position.y -= 5;
+            LLCircle.rotation.x = 0.8;
+            LLCircle.rotation.y = 0.2;
+
+            // Lower Right Circle
+            LRCircle.position.x += 10;
+            LRCircle.position.y -= 5;
+            LRCircle.rotation.x = 0.8;
+            LRCircle.rotation.y -= 0.1;
+
+            // Upper Center Circle
+            UCCircle.position.set(4, 50, -125);
+            UCCircle.scale.set(4,3,3);
+
+            // Center Circle
+            CCircle.position.set(4, 21, -120);
+            CCircle.scale.set(4,2.7,3);
+            var color = new THREE.Color(0xC0C0C0);
 
 
             mtlLoader.load('assets/meta.mtl', function (materials) {
