@@ -4,9 +4,9 @@ This project recreates a three dimensional scene from the game "Undertale" using
 
 ## Tools
 In order to create the models of the scene's components and their designs some tools were used:
-- [Tinkercad] (https://www.tinkercad.com)
+- [Tinkercad](https://www.tinkercad.com)
 - Vectory
 
 ## Preview
 A live version of the scene can be previewed here: https://sdkvictor.github.io/MettatonThreeJS/
-[link to Google!](http://google.com)
+
