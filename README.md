@@ -18,3 +18,9 @@ A live version of the scene can be previewed here: https://sdkvictor.github.io/M
 ## Credits
 Some additional credits:
 - Frisk's model was borrowed from [here](https://www.models-resource.com/custom_edited/undertalecustoms/model/19707/)
+
+## Contributors
+Team #2:
+  - Víctor Andrés Villarreal Grimaldo. A01039863
+  - Moisés Fernandez Zarate. A01097049
+  - Carlos Gerardo Herrera Cortina. A00821946
