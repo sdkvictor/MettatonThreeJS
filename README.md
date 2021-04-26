@@ -7,6 +7,7 @@ This project recreates a three dimensional scene from the game "Undertale" using
 <img align="left" alt="originalscene" width="500px" src="https://raw.githubusercontent.com/sdkvictor/MettatonThreeJS/main/originalscene.jpeg" /> 
 </p>
 
+<p>
 ## Tools
 In order to create the models of the scene's components and their designs some tools were used:
 - [Tinkercad](https://www.tinkercad.com)
