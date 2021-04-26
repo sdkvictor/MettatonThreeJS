@@ -75,7 +75,23 @@
                     object.position.y -= 50;
                     object.position.x += 5;
                     object.rotation.x = 1;
-                    object.scale(1,1);
+
+                });
+            });
+
+            // modelo de frisk es de eytamdorfman, https://www.tinkercad.com/things/9H55fVfQuBh-undertale-frisk
+            mtlLoader.load('assets/obj.mtl', function (materials) {
+                materials.preload();
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);        
+            objLoader.load('assets/tinker.obj', function (object){
+                    scene.add(object);
+                    object.position.z -= 130;
+                    object.position.y -= 0;
+                    object.position.x -= 3;
+                    object.rotation.y = 0;
+                    object.rotation.z = 0;
+                    object.rotation.x = -1;
 
                 });
             });
