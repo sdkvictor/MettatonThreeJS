@@ -22,5 +22,5 @@ Some additional credits:
 ## Contributors
 Team #2:
   - Víctor Andrés Villarreal Grimaldo. A01039863
-  - Moisés Fernandez Zarate. A01097049
+  - Moisés Fernández Zárate. A01197049
   - Carlos Gerardo Herrera Cortina. A00821946
