@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>        
         <script src="js/mtl.js"></script>
         <script src="js/obj.js"></script>
+        <script src="js/OrbitControls.js"></script>
 		<script>
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -30,7 +31,10 @@
                 camera.aspect = window.innerWidth / window.innerHeight;
 
                 camera.updateProjectMatrix();
-            })
+            });
+
+            controls = new THREE.OrbitControls( camera, renderer.domElement );
+            //controls.target.set( 0, 0, 0 );
             
 
             //Add light
