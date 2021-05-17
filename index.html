@@ -25,10 +25,11 @@
 
             // create a global audio source
             const sound = new THREE.Audio( listener );
+            sound.autoplay  = true;
 
             // load a sound and set it as the Audio object's buffer
             const audioLoader = new THREE.AudioLoader();
-            audioLoader.load( 'assets/sounds/deathbyglamour.mp3', function( buffer ) {
+            audioLoader.load( 'assets/sounds/deathbyglamour.ogg', function( buffer ) {
                 sound.setBuffer( buffer );
                 sound.setLoop( true );
                 sound.setVolume( 0.5 );
