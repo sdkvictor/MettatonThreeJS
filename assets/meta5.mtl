@@ -1,0 +1,99 @@
+newmtl Cylinder material 4_04227402-da65-4b28-897a-ccb1c3cfe9e8
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Cylinder material 5_13f69180-74c9-419e-96ce-1a81352fc649
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Cylinder material 6_ac9bf230-8ea1-4359-bbc0-b5e22fd39d4d
+Kd 0.800 0.800 0.800
+d 1.000
+newmtl Sphere material 1_8488d0a9-7946-4d03-90ec-ac56d28def03
+Kd 1.000 1.000 1.000
+d 1.000
+newmtl Sphere material_53f3a522-07fc-460c-a6bf-6c02b77882ee
+Kd 1.000 1.000 1.000
+d 1.000
+newmtl Cylinder material 3_2c4ea05e-a9e5-463e-b015-a9474b783ffc
+Kd 0.000 0.000 0.000
+d 1.000
+newmtl Cylinder material 1_af1cf179-e1a1-4506-8500-06db4b58fdb8
+Kd 0.808 0.871 0.235
+d 1.000
+newmtl Cylinder material 2_40981828-abd3-492e-a493-bc85ffc990c7
+Kd 0.808 0.871 0.235
+d 1.000
+newmtl Cylinder material_c9a64855-b1da-4351-83d0-6c384b6d5c16
+Kd 0.808 0.871 0.235
+d 1.000
+newmtl Box material 14_841e5fdf-e965-4b71-ade9-930e9823a4dd
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material_fe3dd8bc-9ba5-4384-9c32-009eb8bf00dd
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 13_9a81c968-254a-4972-bc03-f9800a56b710
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 20_23f46939-e9cc-42f6-9b8f-b1bf9b10da1b
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 2_ecce9627-b097-4fdf-adbb-07ada372ab27
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 3_eebbca37-9026-483f-8da7-52b76394269c
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 8_97553658-5d7d-4920-a057-da15486d9800
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 9_36fd52f3-d514-4c89-a664-98f8b524447a
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 11_1537faf0-c31f-4c7c-b0c5-4d2bb7b094b5
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 4_407da7af-8a38-4a91-978a-558c0d90ff08
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 1_d4470d4d-a01c-4c9b-8579-a3b2198ea241
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 5_2d4e3504-230a-434d-a3cb-ca95f61fbcc7
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 6_a18a89a8-eadc-45c7-a3e3-9b2e2fd4bc13
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 21_f949c88e-eb7c-4b20-9e10-f07d5231566a
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 16_2e30f2a9-37ca-4139-87a9-db9956160104
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 15_fcb5a37f-1def-4779-9907-990c02aa4838
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 19_5f1ed207-e4f6-4afa-a3b1-192f4e30410a
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 18_2227de93-f5f0-4646-8536-b388efdd063e
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 17_7870740e-806b-489c-83f6-dcf050492249
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 22_1f15060c-2371-4b2d-aa67-85a87907d8c6
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 7_a201dede-7f8d-4c9a-9ce2-5cdcc7affac6
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Box material 10_65b00eb8-c341-40ff-84f6-0f050d85f979
+Kd 1.000 0.000 0.000
+d 1.000
+newmtl Box material 12_552094d3-e2e1-4bbe-bd18-88b5e51c4c60
+Kd 0.988 0.976 0.157
+d 1.000
+newmtl Material_c1e15a25-02f5-4403-9aec-832695d65194
+Kd 0.490 0.439 0.439
+d 1.000
