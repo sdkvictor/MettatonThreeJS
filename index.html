@@ -57,14 +57,20 @@
             //Add light
             var light = new THREE.PointLight(0xFFFFFF, 1, 1000, 2);
             light.position.set(0,80,100);
+            light.name = "light";
             var light2 = new THREE.PointLight(0xFFFFFF, 0.5, 1000, 2);
             light2.position.set(50,80,0);
+            light2.name = "light2";
             var light3 = new THREE.PointLight(0xFFFFFF, 1, 1000, 2);
             light3.position.set(0,80,200);
+            light3.name = "light3";
             var light4 = new THREE.PointLight(0xFFFFFF, 1, 1000, 2);
             light4.position.set(0,80,-200);
+            light4.name = "light4";
             var light5 = new THREE.PointLight(0xFFFFFF, 0.5, 1000, 2);
+            light5.name = "light5";
             light2.position.set(-50,80,0);
+            
             scene.add(light);
             scene.add(light2);
             scene.add(light3);
@@ -206,6 +212,9 @@
 
             // Function to change the model of Mettaton
             function changeModel() {
+                //lightsOff();
+
+                
                 var randomNumber = Math.ceil(Math.random() * 6);
                 //actModel = scene.children[schene.children.length - 1];
 
@@ -217,25 +226,49 @@
                 switch(randomNumber) {
                     case 1:
                         addModel('assets/meta1.mtl', 'assets/meta1.obj');
+                       /* setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
+                        */
                         break;
                     case 2:
                         addModel('assets/meta2.mtl', 'assets/meta2.obj');
+                        /* setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
+                        */
                         break;
                     case 3:
                         addModel('assets/meta3.mtl', 'assets/meta3.obj');
+                        /* setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
+                        */
                         break;
                     case 4:
                         addModel('assets/meta4.mtl', 'assets/meta4.obj');
+                        setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
                         break;
                     case 5:
                         addModel('assets/meta5.mtl', 'assets/meta5.obj');
+                        /* setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
+                        */
                         break;
                     case 6:
                         addModel('assets/meta6.mtl', 'assets/meta6.obj');
+                        /* setTimeout(function () {
+                            lightsOn();   
+                        }, 500);
+                        */
                         break;
                 }
 
                 index = randomNumber;
+
             }
 
             // Function to detect key pressed
@@ -247,6 +280,21 @@
                     }
                 };
                 
+            }
+
+            function lightsOn() {
+                scene.add(light);
+                scene.add(light2);
+                scene.add(light3);
+                scene.add(light4);
+                
+            }
+
+            function lightsOff() {
+                scene.remove(scene.getObjectByName('light'));
+                scene.remove(scene.getObjectByName('light2'));
+                scene.remove(scene.getObjectByName('light3'));
+                scene.remove(scene.getObjectByName('light4'));
             }
 			
             setupKeyControls();
