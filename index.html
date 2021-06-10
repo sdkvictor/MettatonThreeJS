@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>My first three.js app</title>
+		<title>Undertale Mettaton Scene</title>
 		<link rel="stylesheet" href="css/main.css"> 
 	</head>
 	<body>
@@ -28,13 +28,13 @@
             sound.autoplay  = true;
 
             // load a sound and set it as the Audio object's buffer
-            const audioLoader = new THREE.AudioLoader();
-            audioLoader.load( 'assets/sounds/deathbyglamour.ogg', function( buffer ) {
-                sound.setBuffer( buffer );
-                sound.setLoop( true );
-                sound.setVolume( 0.5 );
-                sound.play();
-            });
+            // const audioLoader = new THREE.AudioLoader();
+            // audioLoader.load( 'assets/sounds/deathbyglamour.ogg', function( buffer ) {
+            //     sound.setBuffer( buffer );
+            //     sound.setLoop( true );
+            //     sound.setVolume( 0.5 );
+            //     sound.play();
+            // });
 
             //scene.setClearColor('#')
 			const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
@@ -149,22 +149,6 @@
             CCircle.scale.set(3.5,3.5,1);
             var color = new THREE.Color(0xC0C0C0);
 
-
-            mtlLoader.load('assets/meta.mtl', function (materials) {
-                materials.preload();
-                var objLoader = new THREE.OBJLoader();
-                objLoader.setMaterials(materials);        
-            objLoader.load('assets/meta.obj', function (object){
-                    scene.add(object);
-                    object.position.z -= 13 ;
-                    object.position.y -= 186.5;
-                    object.position.x -= -2;
-                    //object.position.x += 5;
-                    //object.rotation.x = 1;
-
-                });
-            });
-
             // modelo de frisk es de eytamdorfman, https://www.tinkercad.com/things/9H55fVfQuBh-undertale-frisk
             mtlLoader.load('assets/Frisk.mtl', function (materials) {
                 materials.preload();
@@ -183,8 +167,87 @@
                     scene.add(object);
                 });
             });
+
+            var objectName, selectedObject;
+
+            // Add first Mettaton model to the scene
+            mtlLoader.load('assets/meta1.mtl', function (materials) {
+                materials.preload();
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);        
+            objLoader.load('assets/meta1.obj', function (object){
+                    object.name = 'previous';
+                    scene.add(object);
+                    object.position.z -= 13 ;
+                    object.position.y -= 186.5;
+                    object.position.x -= -2;
+                });
+            });
+
+            // Function to add model to scene
+            function addModel(pathMtl, pathObj) {
+                mtlLoader.load(pathMtl, function (materials) {
+                    materials.preload();
+                    var objLoader = new THREE.OBJLoader();
+                    objLoader.setMaterials(materials);        
+                objLoader.load(pathObj, function (object){
+                        selectedObject = scene.getObjectByName('previous');
+                        scene.remove(selectedObject);
+                        object.name = 'previous';
+                        scene.add(object);
+                        object.position.z -= 13 ;
+                        object.position.y -= 186.5;
+                        object.position.x -= -2;
+                    });
+                });
+            }
+
+            var index = 1;
+
+            // Function to change the model of Mettaton
+            function changeModel() {
+                var randomNumber = Math.floor(Math.random() * 6);
+                //actModel = scene.children[schene.children.length - 1];
+
+                while (randomNumber == index) {
+                    randomNumber = Math.floor(Math.random() * 6);
+                }
+
+                switch(randomNumber) {
+                    case 1:
+                        addModel('assets/meta1.mtl', 'assets/meta1.obj');
+                        break;
+                    case 2:
+                        addModel('assets/meta2.mtl', 'assets/meta2.obj');
+                        break;
+                    case 3:
+                        addModel('assets/meta3.mtl', 'assets/meta3.obj');
+                        break;
+                    case 4:
+                        addModel('assets/meta4.mtl', 'assets/meta4.obj');
+                        break;
+                    case 5:
+                        addModel('assets/meta5.mtl', 'assets/meta5.obj');
+                        break;
+                    case 6:
+                        addModel('assets/meta6.mtl', 'assets/meta6.obj');
+                        break;
+                }
+
+                index = randomNumber;
+            }
+
+            // Function to detect key pressed
+            function setupKeyControls() {
+                document.onkeydown = function(e) {
+                    switch (e.keyCode) {
+                        case 32: // SPACE
+                            changeModel();
+                    }
+                };
+            }
 			
-            
+            setupKeyControls();
 
             var render = function() {
                 requestAnimationFrame(render);
