@@ -15,6 +15,12 @@ In order to create the models of the scene's components and their designs some t
 ## Preview
 A live version of the scene can be previewed here: https://sdkvictor.github.io/MettatonThreeJS/
 
+### Controls
+- Move the mouse while holding the left click button to rotate the camera.
+- Move the mouse while holding the right click button to move the camera's position.
+- Use the mouse wheel to zoom in and out.
+- Press the Space key on the keyboard to change Mettaton's pose.
+
 ## Credits
 Some additional credits:
 - Frisk's model was borrowed from [here](https://www.models-resource.com/custom_edited/undertalecustoms/model/19707/)
