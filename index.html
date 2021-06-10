@@ -16,9 +16,9 @@
 		<script>
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-            camera.position.z = 130;
+            camera.position.z = 140;
             camera.position.x = 0;
-            camera.position.y = 120;
+            camera.position.y = 80;
 
             const listener = new THREE.AudioListener();
             camera.add( listener );
@@ -28,13 +28,13 @@
             sound.autoplay  = true;
 
             // load a sound and set it as the Audio object's buffer
-            // const audioLoader = new THREE.AudioLoader();
-            // audioLoader.load( 'assets/sounds/deathbyglamour.ogg', function( buffer ) {
-            //     sound.setBuffer( buffer );
-            //     sound.setLoop( true );
-            //     sound.setVolume( 0.5 );
-            //     sound.play();
-            // });
+            const audioLoader = new THREE.AudioLoader();
+            audioLoader.load( 'assets/sounds/deathbyglamour.ogg', function( buffer ) {
+                 sound.setBuffer( buffer );
+                sound.setLoop( true );
+                 sound.setVolume( 0.5 );
+                 sound.play();
+             });
 
             //scene.setClearColor('#')
 			const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
@@ -206,12 +206,13 @@
 
             // Function to change the model of Mettaton
             function changeModel() {
-                var randomNumber = Math.floor(Math.random() * 6);
+                var randomNumber = Math.ceil(Math.random() * 6);
                 //actModel = scene.children[schene.children.length - 1];
 
                 while (randomNumber == index) {
-                    randomNumber = Math.floor(Math.random() * 6);
+                    randomNumber = Math.ceil(Math.random() * 6);
                 }
+                console.log(randomNumber);
 
                 switch(randomNumber) {
                     case 1:
@@ -245,6 +246,7 @@
                             changeModel();
                     }
                 };
+                
             }
 			
             setupKeyControls();
